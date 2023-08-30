@@ -9,19 +9,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{721B6B08
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6E06F9B3-F332-418A-9F9A-DDEDF0F34EC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{A09C6A70-B592-4AB0-8EC7-3AA2FF1CF825}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{A09C6A70-B592-4AB0-8EC7-3AA2FF1CF825}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{E9F53D69-38EB-4EE8-AB4B-665140E4CB2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{E9F53D69-38EB-4EE8-AB4B-665140E4CB2A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastucture", "Infrastucture", "{3B269247-CB06-4435-A2CC-DDFB924639CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "persistence\Persistence.csproj", "{6516162A-DDD5-4A28-930B-700E7DBA99FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "persistence\Persistence.csproj", "{6516162A-DDD5-4A28-930B-700E7DBA99FA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{2D191790-8FBF-4AD2-84D5-51C93537EFF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportInsuranceApi", "SportInsuranceApi\SportInsuranceApi.csproj", "{E0730954-88C4-45C8-B01F-BC8EF344CB48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportInsuranceApi", "SportInsuranceApi\SportInsuranceApi.csproj", "{E0730954-88C4-45C8-B01F-BC8EF344CB48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireInsuranceApi", "FireInsuranceApi\FireInsuranceApi.csproj", "{246D86C2-34DE-4101-9E58-A0F42AF32A05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FireInsuranceApi", "FireInsuranceApi\FireInsuranceApi.csproj", "{246D86C2-34DE-4101-9E58-A0F42AF32A05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

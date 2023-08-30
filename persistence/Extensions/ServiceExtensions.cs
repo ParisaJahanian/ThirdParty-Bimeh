@@ -1,17 +1,16 @@
-﻿using Domain.Interfaces;
-using persistence;
-using Persistence.Implementetaion;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Exceptions;
 using Serilog.Sinks.Elasticsearch;
 using System.Reflection;
 
 
-namespace BimehApi.API
+namespace Bimeh.Infratructure.Extension
 {
     public static class ServiceExtensions
     {
-
         public static void ConfigureLogging(this IServiceCollection service, IConfiguration configuration, IHostEnvironment hostEnvironment)
         {
             Log.Logger = new LoggerConfiguration()
@@ -23,7 +22,6 @@ namespace BimehApi.API
                 .Enrich.WithProperty("Environment", hostEnvironment.EnvironmentName)
                 .ReadFrom.Configuration(configuration)
                 .CreateLogger();
-
             service.AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true));
         }
 
@@ -35,20 +33,22 @@ namespace BimehApi.API
                 IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name?.ToLower().Replace(".", "-")}-{environmentName?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}"
             };
         }
-
-        public static IServiceCollection AddFireServices(this IServiceCollection services,
-             IConfiguration configuration)
-        {
-            services.Configure<FireInsuranceOptions>(configuration.GetSection(FireInsuranceOptions.SectionName));
-            services.AddScoped<IFireInsuranceService, FireInsuranceService>();
-            services.AddScoped<IFireInsuranceRepository, FireInsuranceRepository>();
-            return services;
-        }
-
         //public static void StartBackgroundTasks(IServiceCollection services, IConfiguration configuration)
         //{
-        //    var JobOptions = configuration.GetSection(TokenBackgroundJobOption.SectionName).Get<TokenBackgroundJobOption>();
-        //    RecurringJob.AddOrUpdate<ISportInsuranceRepository>(x => x.GetSportToken(), JobOptions.CronExpression);
+        //    var JobOptions = configuration.GetSection(BackgroundJobOption.SectionName).Get<BackgroundJobOption>();
+        //    var login = new LoginReqDTO
+        //    {
+        //        UserName = JobOptions.UserName,
+        //        Password = JobOptions.Password,
+        //        PublicLogData = new PublicLogData
+        //        {
+        //            PublicAppId = Guid.NewGuid().ToString(),
+        //            PublicReqId = Guid.NewGuid().ToString(),
+        //            ServiceId = Guid.NewGuid().ToString(),
+        //            UserId = Guid.NewGuid().ToString()
+        //        }
+        //    };
+        //    RecurringJob.AddOrUpdate<ICarElectronicTollService>(x => x.LoginAsync(login), JobOptions.CronExpression);
         //}
     }
 }

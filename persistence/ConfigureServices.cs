@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Persistence
 {
-    internal class ConfigureServices
+    public class ConfigureServices
     {
+
     }
 }

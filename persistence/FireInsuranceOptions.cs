@@ -1,4 +1,4 @@
-﻿namespace BimehApi.Models.SportsInsurance
+﻿namespace persistence
 {
     public sealed class FireInsuranceOptions
     {
