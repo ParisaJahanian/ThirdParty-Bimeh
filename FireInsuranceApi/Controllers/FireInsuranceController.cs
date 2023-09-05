@@ -13,7 +13,7 @@ namespace FireInsuranceApi.Controllers
 {
     [ApiController]
     [ApiVersion("1")]
-    [Route("Bimeh/Fire//v1/[controller]")]
+    [Route("Bimeh/Fire/v1/[controller]")]
     [ApiExplorerSettings]
     [ApiResultFilterAttribute]
     public class FireInsuranceController : ControllerBase

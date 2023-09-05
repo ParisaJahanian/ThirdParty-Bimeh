@@ -1,4 +1,5 @@
 ﻿using Domain.Interfaces;
+using FireInsuranceApi;
 using persistence;
 using Persistence.Implementetaion;
 using Serilog;
@@ -42,6 +43,7 @@ namespace BimehApi.API
             services.Configure<FireInsuranceOptions>(configuration.GetSection(FireInsuranceOptions.SectionName));
             services.AddScoped<IFireInsuranceService, FireInsuranceService>();
             services.AddScoped<IFireInsuranceRepository, FireInsuranceRepository>();
+            services.AddScoped<BaseLog>();
             return services;
         }
 

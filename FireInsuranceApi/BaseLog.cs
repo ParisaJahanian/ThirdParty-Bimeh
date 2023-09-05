@@ -1,6 +1,7 @@
 ﻿using Bimeh.ErrorHandling;
+using Bimeh.Infratructure.Extension;
 using Bimeh.Models;
-using CarElectronicTolls.Infratructure.Extension;
+
 using Domain.Interfaces;
 using Newtonsoft.Json;
 using Persistence.ErrorHandling;
